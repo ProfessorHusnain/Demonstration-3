@@ -8,6 +8,7 @@ import {
 }
   from "./AppElements";
 import SideBar from "./components/SideBar";
+import Header from "./components/Header";
 
 function App() {
 
@@ -22,7 +23,9 @@ function App() {
       <SideBarContainer>
         <SideBar isOpen={isSidebarOpen}></SideBar> 
       </SideBarContainer>
-      <NavBarContainer onClick={handleToggleSidebar}>Hello </NavBarContainer>
+      <NavBarContainer onClick={handleToggleSidebar}>
+        <Header></Header>
+      </NavBarContainer>
       <MainContent> </MainContent>
       <FooterContainer> </FooterContainer>
     </AppContainer>
