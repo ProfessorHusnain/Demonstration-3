@@ -1,10 +1,11 @@
 import React from 'react'
+import { HeaderContainer } from './HeaderElements'
 
 const Header = () => {
   return (
-    <div>
-      
-    </div>
+    <HeaderContainer>
+        
+    </HeaderContainer>
   )
 }
 

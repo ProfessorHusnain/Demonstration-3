@@ -10,7 +10,7 @@ export const AppContainer = styled.div`
     "SideBar MainContent"
     "SideBar Footer";
   grid-gap: 2px;
-  background-color: whitesmoke;
+  background-color: rgb(248, 249, 250);;
   @media (max-width: 1060px) {
     grid-template-columns: 100%;
     grid-template-rows: 8% 87% 5%;

@@ -9,6 +9,9 @@ import {
   from "./AppElements";
 import SideBar from "./components/SideBar";
 import Header from "./components/Header";
+import Profile from "./components/Profile";
+
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
 
@@ -19,15 +22,29 @@ function App() {
   };
 
   return (
+
     <AppContainer isSidebarOpen={isSidebarOpen}>
-      <SideBarContainer>
-        <SideBar isOpen={isSidebarOpen}></SideBar> 
-      </SideBarContainer>
-      <NavBarContainer onClick={handleToggleSidebar}>
-        <Header></Header>
-      </NavBarContainer>
-      <MainContent> </MainContent>
-      <FooterContainer> </FooterContainer>
+      <Router>
+        {/** <!-------------------------------SideBar----------------------------------!> */}
+        <SideBarContainer>
+          <SideBar isOpen={isSidebarOpen} />
+        </SideBarContainer>
+
+        {/** <!--------------------------------NavBar---------------------------------!> */}
+        <NavBarContainer onClick={handleToggleSidebar}>
+          <Header />
+        </NavBarContainer>
+
+        {/** <!---------------------------------MainContent--------------------------------!> */}
+        <MainContent>
+          <Profile />
+        </MainContent>
+
+        {/** <!---------------------------------Footer--------------------------------!> */}
+        <FooterContainer>
+
+        </FooterContainer>
+      </Router>
     </AppContainer>
   );
 }
