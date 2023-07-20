@@ -24,7 +24,7 @@ export const SideBar=styled.div`
 
 export const MainContent=styled.div`
  grid-area: MainContent;
- background-color: yellow;
+ 
 `
 
  

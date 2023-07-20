@@ -2,6 +2,7 @@ import React from 'react'
 import { InfoCard as InfoCardContainer, MainContent, ProfileContainer, SideBar as SideBarContainer  } from './ProfileElements'
 import InfoCard from './InfoCard'
 import SideBar from './SideBar'
+import PersonalInfo from './PersonalInfo'
 
 const Profile = () => {
     return (
@@ -15,7 +16,12 @@ const Profile = () => {
             <SideBarContainer>
                 <SideBar />
             </SideBarContainer>
-            <MainContent>MainContent</MainContent>
+            <MainContent>
+
+                <PersonalInfo>
+                    
+                </PersonalInfo>
+            </MainContent>
           
 
         </ProfileContainer>
