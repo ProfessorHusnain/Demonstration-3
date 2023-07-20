@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   PersonalInfoContainer,
   Title,
@@ -8,8 +8,12 @@ import {
   Label,
   InputFiled,
   SelectionFiled,
-  SelectionFiledContainer
+  SelectionFiledContainer,
+  PhoneInputFiled,
+  AddressFiled,
+  CountrynputFiled
 } from './PersonalInfoElements'
+ 
  
 const months = [
   { name: 'January', days: 31 },
@@ -33,6 +37,9 @@ for (let year = 1975; year <= 2050; year++) {
 }
 
 const PersonalInfo = () => {
+
+  const [phoneNumber,setPhoneNumber]=useState()
+  const [country,setCountry]=useState()
 
   const days = Array.from({ length: 31 }, (_, index) => index + 1);
 
@@ -93,7 +100,62 @@ const PersonalInfo = () => {
           
         </RowMapper>
       </RowWrapper>
+
+      <RowWrapper>
+        <RowMapper>
+          <Label>Phone Number</Label>
+          <PhoneInputFiled
+          value={phoneNumber}
+          onChange={setPhoneNumber}
+          defaultCountry='PK'
+          international 
+          countryCallingCodeEditable={false}
+          />
+        </RowMapper>
+        <RowMapper>
+          <Label>Designation</Label>
+          <InputFiled/>
+        </RowMapper>
+      </RowWrapper>
+
+
       </FiledContainer>
+
+      <Title>
+      Address
+      </Title>
+      <FiledContainer>
+
+      <RowWrapper>
+        <RowMapper>
+          <Label>Address 01</Label>
+          <AddressFiled/>
+        </RowMapper>
+        <RowMapper>
+          <Label>Address 02</Label>
+          <AddressFiled/>
+        </RowMapper>
+      </RowWrapper>
+
+
+      <RowWrapper>
+        <RowMapper>
+          <Label>Country</Label>
+          <CountrynputFiled
+          value={country}
+          onChange={setCountry}
+          defaultCountry='PK'
+          />
+        </RowMapper>
+        <RowMapper>
+          <Label>State</Label>
+          <InputFiled/>
+        </RowMapper>
+      </RowWrapper>
+
+      </FiledContainer>
+      <Title>Skills</Title>
+
     </PersonalInfoContainer>
   )
 }

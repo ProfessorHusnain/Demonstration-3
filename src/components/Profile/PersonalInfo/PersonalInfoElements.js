@@ -1,4 +1,6 @@
 import  styled  from "styled-components";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 export const PersonalInfoContainer=styled.div`
 background-color: rgb(255, 255, 255);
@@ -9,6 +11,8 @@ background-color: rgb(255, 255, 255);
     position: relative;
     border: 1px solid rgba(219, 224, 229, 0.65);
     border-radius: 12px; 
+
+    
 `
 export const Title=styled.h1`
  
@@ -16,6 +20,7 @@ export const Title=styled.h1`
     font-weight: 600;
     line-height: 1.57;
    padding: 25px;
+
    border-bottom: 1px solid rgba(219, 224, 229, 0.65);
   
 `
@@ -29,7 +34,7 @@ export const FiledContainer=styled.div`
 export const RowWrapper=styled.div`
  display: flex;
  flex-direction: row;
- gap: 10px;
+ gap: 20px;
  margin: 10px 0;
 `
 
@@ -82,4 +87,109 @@ cursor: pointer;
      outline: none;
 }
 
+`
+
+export const PhoneInputFiled = styled(PhoneInput)`
+.PhoneInputCountry {
+padding: 14px;
+border-radius: 6px;
+border: 1.5px solid darkgrey;
+cursor: pointer;
+&:focus{
+     border-color: blue;
+     outline: none;
+}
+}
+
+.PhoneInputInput{
+     padding: 14px;
+border-radius: 6px;
+border: 1.5px solid darkgrey;
+cursor: pointer;
+&:focus{
+     border-color: blue;
+     outline: none;
+}
+}
+`
+
+export const AddressFiled = styled.textarea`
+padding: 14px;
+border-radius: 6px;
+ max-width: inherit;
+ min-width: 90%;
+  
+ max-height: 30px;
+ min-height: 30px;
+ line-height: 1.4375em;
+border: 1.5px solid darkgrey;
+cursor: pointer;
+
+&:focus{
+     border-color: blue;
+     outline: none;
+}
+`
+
+
+
+export const CountrynputFiled = styled(PhoneInput)`
+.PhoneInputCountry {
+padding: 14px;
+width: 100%;
+border-radius: 6px;
+border: 1.5px solid darkgrey;
+cursor: pointer;
+ 
+&:focus{
+     border-color: blue;
+     outline: none;
+}
+}
+.PhoneInputCountrySelect{
+     position: relative;
+    top: 0;
+    left: 0;
+ 
+    height: 100%;
+    width: 80%;
+    z-index: 1;
+     border: none;
+    opacity: 1;
+    cursor: pointer;
+ 
+}
+select {
+     border: none;
+     outline: none;
+}
+
+.PhoneInputCountry{
+ 
+  display: flex;
+  justify-content: end;
+}
+
+.PhoneInputCountryIconImg.PhoneInputCountryIcon,
+.PhoneInputCountryIcon--border{
+     position: absolute;
+     width: 25px;
+     height: 19px;
+     z-index: 1;
+     padding: 1px;
+     top: -1;
+     background-color: none;
+    box-shadow: none;
+     left: 0;
+     margin-left: 5px;
+      
+    
+}
+ 
+.PhoneInputInput,
+.PhoneInputCountrySelectArrow,
+.PhoneInputInternationalIconPhone
+  {
+     display: none;
+}
 `
