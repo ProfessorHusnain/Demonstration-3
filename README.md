@@ -8,4 +8,4 @@ In the project directory, you can run:
 
 ## Output
 
-![OUTPUT!](./images/output.png)
+![OUTPUT!](/output.png)
