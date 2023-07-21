@@ -50,7 +50,7 @@ export const Label =styled.label`
     line-height: 1.4375em;
     font-family: "Inter var";
     white-space: nowrap;
-    padding:7px ;
+    padding:8px ;
     color: rgb(91, 107, 121);
 `
 
@@ -193,3 +193,98 @@ select {
      display: none;
 }
 `
+
+
+
+export const SkillContainer=styled(RowWrapper)`
+ flex-wrap: wrap;
+ 
+`
+export const SkillAdder=styled(InputFiled)`
+ appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+     flex-grow: 1;
+     border: none;
+    width: max-content;
+   
+    &:focus{
+     border-bottom: 1px solid darkgray;
+     border-radius: none;
+     outline: none;
+}
+ 
+`
+
+
+export const SkillData=styled.datalist`
+   appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-calendar-picker-indicator:none; 
+`
+
+export const SkillVeiwerBox=styled.div`
+  padding: 1px;
+border-radius: 16px;
+width: fit-content;
+display: flex;
+ 
+border: 1.5px solid darkgrey;
+
+`
+export const SkillVeiwerIcon=styled.img`
+   width: 15px;
+   height: 15px;
+   padding: 5px;
+   cursor: pointer;
+ margin: auto;
+`
+export const Note=styled(AddressFiled)`
+margin-top: 15px;
+max-height: 150px;
+min-height: 150px;
+height: 150px;
+
+max-width: 95%;
+min-width: 95%;
+width: 95%;
+cursor: pointer;
+  
+`
+export const ButtonContainer=styled.div`
+ 
+     
+     padding: 5px;
+     margin-top: 5px;
+     display: flex;
+     justify-content: end;
+  
+`
+
+
+export const Button=styled.button`
+ 
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: ${({outline})=>outline?'1px':'0px'} ;
+    border: ${({outline})=>outline?'1px solid ':'0px'};
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: "Inter var";
+    font-size: 0.875rem;
+    line-height: 1.75;
+     margin: 4px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: ${({outline})=>outline?'black':'rgb(255, 255, 255)'};
+    background-color: ${({outline})=>outline?'white':'rgb(70, 128, 255)'};
+    box-shadow: none;
+    font-weight: 400;
+
+`
+
