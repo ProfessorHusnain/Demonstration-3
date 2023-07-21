@@ -1,4 +1,4 @@
-# Getting Started with Create Demonsteation
+# Getting Started with Create Demonstration
  
 ## Available Scripts
 
@@ -8,4 +8,4 @@ In the project directory, you can run:
 
 ## Output
 
-![OUTPUT!](./images/output.png)
+![OUTPUT!](/images/output.png)
