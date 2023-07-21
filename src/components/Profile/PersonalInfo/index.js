@@ -77,23 +77,40 @@ for (let year = 1975; year <= 2050; year++) {
   years.push([year]);
 }
 
-const SkillCrossAction = (s) => {
-  console.log(s)
-  skillList.push(skillList.filter((i) => i !== s))
-}
-skillList.map((d, i) => i <= 8 && selectedSkillsList.push(d))
+
+skillList.map((d, i) => i <= 5 && selectedSkillsList.push(d))
+
+
+
+
+
 const PersonalInfo = () => {
 
   const [phoneNumber, setPhoneNumber] = useState()
   const [country, setCountry] = useState()
-  const [skills, setSkills] = useState(selectedSkillsList)
+  const [selectedSkills, setSelectedSkills] = useState(selectedSkillsList)
+  const [inputSkill, setInputSkill] = useState('')
 
-
-
-
-
-
+ 
   const days = Array.from({ length: 31 }, (_, index) => index + 1);
+
+  const HandelInputSkill=(v)=>{
+    setInputSkill(v)
+
+    if(skillList.includes(v)){
+      if(!selectedSkills.includes(v)){
+        setSelectedSkills((pv)=>[...pv,v])
+        setInputSkill('')
+      }
+      
+    }
+
+  }
+
+  const SkillCrossAction = (s) => {
+     
+     setSelectedSkills(selectedSkills.filter((v)=> v!==s))
+  }
 
   return (
     <PersonalInfoContainer>
@@ -213,7 +230,7 @@ const PersonalInfo = () => {
         <SkillContainer>
 
           {
-            skills.map((s, i) => {
+            selectedSkills.map((s, i) => {
               return (
                 <SkillVeiwerBox>
 
@@ -224,19 +241,20 @@ const PersonalInfo = () => {
             })
           }
 
-          <SkillAdder type='text' placeholder='Add Skill' list="fruitsList">
+          <SkillAdder type='text' 
+          value={inputSkill} 
+          onChange={(t)=>HandelInputSkill(t.target.value)} 
+          placeholder='Add Skill'
+          list="skillList">
 
           </SkillAdder>
-          <SkillData id="fruitsList">
+          <SkillData id="skillList">
             {
-              skillList.map((m, i) => {
+              skillList.map((m) => {
                 return (
-                  <>
-                    {i === 0 &&
-                      <option disabled >Add Skill</option>
-                    }
+                  
                     <option>{m}</option>
-                  </>
+                 
                 )
               })
             }
