@@ -52,6 +52,5 @@ export const MainContent = styled.main`
 
 export const FooterContainer = styled.footer`
  
-  
 `
 

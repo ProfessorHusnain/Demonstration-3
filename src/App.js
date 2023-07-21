@@ -10,8 +10,10 @@ import {
 import SideBar from "./components/SideBar";
 import Header from "./components/Header";
 import Profile from "./components/Profile";
+ 
 
 import { BrowserRouter as Router } from "react-router-dom";
+ 
 
 function App() {
 
@@ -41,7 +43,7 @@ function App() {
 
           {/** <!---------------------------------Footer--------------------------------!> */}
           <FooterContainer>
-
+           
           </FooterContainer>
         </MainContent>
       </Router>

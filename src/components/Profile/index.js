@@ -3,6 +3,7 @@ import { InfoCard as InfoCardContainer, MainContent, ProfileContainer, SideBar a
 import InfoCard from './InfoCard'
 import SideBar from './SideBar'
 import PersonalInfo from './PersonalInfo'
+import Footer from '../Footer'
 
 const Profile = () => {
     return (
@@ -21,9 +22,10 @@ const Profile = () => {
                 <PersonalInfo>
                     
                 </PersonalInfo>
+                <Footer/>
             </MainContent>
           
-
+  
         </ProfileContainer>
     )
 }
