@@ -38,12 +38,12 @@ function App() {
         {/** <!---------------------------------MainContent--------------------------------!> */}
         <MainContent>
           <Profile />
+
+          {/** <!---------------------------------Footer--------------------------------!> */}
+          <FooterContainer>
+
+          </FooterContainer>
         </MainContent>
-
-        {/** <!---------------------------------Footer--------------------------------!> */}
-        <FooterContainer>
-
-        </FooterContainer>
       </Router>
     </AppContainer>
   );
