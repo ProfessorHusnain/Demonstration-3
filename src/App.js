@@ -31,8 +31,8 @@ function App() {
         </SideBarContainer>
 
         {/** <!--------------------------------NavBar---------------------------------!> */}
-        <NavBarContainer onClick={handleToggleSidebar}>
-          <Header />
+        <NavBarContainer >
+          <Header handleToggleSidebar={handleToggleSidebar} />
         </NavBarContainer>
 
         {/** <!---------------------------------MainContent--------------------------------!> */}

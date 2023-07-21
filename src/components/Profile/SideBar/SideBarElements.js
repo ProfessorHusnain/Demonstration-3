@@ -21,10 +21,6 @@ display: block;
 
 export const  EditOption=styled.div`
 display: block;
-
-justify-content: center;
-align-items: center;
-
 margin: 15px 15px;
 float: right;
 height: 30px;
@@ -38,10 +34,7 @@ cursor: pointer;
 `
 export const  EditOptionCircle=styled.span`
 width: 3px;
-display:  flex;
-
- 
-
+display: inline-flex;
 height: 3px;
  margin: 1px;
 border-radius: 50%;

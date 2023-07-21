@@ -6,6 +6,7 @@ export const HeaderContainer=styled.div`
  display: flex;
  justify-content: space-around;
  height: 100%;
+ width: 100%;
  
 `
 

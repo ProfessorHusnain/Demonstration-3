@@ -4,7 +4,7 @@ export const AppContainer = styled.div`
   display: grid;
   height: 100vh;
   grid-template-columns: ${({ isSidebarOpen }) => (isSidebarOpen ? "0.2fr" : "0.09fr")} 1fr;
-  grid-template-rows: 8% auto;
+  grid-template-rows: 10% auto;
   grid-template-areas:
     "SideBar NavBar"
     "SideBar MainContent";
@@ -35,11 +35,12 @@ export const SideBarContainer = styled.div`
 export const NavBarContainer = styled.header`
  grid-area: NavBar;
  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; 
+ right: 0;
   height: 65px;
+  left: calc(9%);
  z-index: 3;
+ 
 `
 
 
